@@ -11,22 +11,18 @@
     },
     "projects": [
       {
-        "title": "Animal Shelter",
-        "startDate": "2020",
-        "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
+        "title": "ProClip",
+        "startDate": "2024",
+        "description": "A clipboard manager that helps users to manage their clipboard data(text and images). It ensures that all copied information is securely stored for a period ranging from 30 to 90 days. This feature guarantees that users can access their clipboard history even after restarting their devices.ProClip offers a user-friendly interface with a chronological order of stored data, making it easy to track and retrieve past entries. Additionally, the integrated search bar allows users to quickly find specific items within their clipboard history, enhancing productivity and efficiency",
         "images": [
-          "images/portfolio/animal-shelter/p1.jpg",
-          "images/portfolio/animal-shelter/p2.jpg"
+          "images/portfolio/proclip/p1.jpg",
+          "images/portfolio/proclip/p2.jpg"
         ],
         "url": "",
         "technologies": [
           {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-wpf-plain",
+            "name": "WPF"
           },
           {
             "class": "devicon-csharp-plain",
