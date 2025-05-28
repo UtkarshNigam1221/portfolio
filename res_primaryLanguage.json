@@ -1,0 +1,152 @@
+{
+    "basic_info": {
+      "description_header": "Hi",
+      "description": "👋 Hi, I'm Utkarsh Nigam, a passionate and innovative software developer with over 4 years of experience in building scalable web and mobile applications. I specialize in backend development, cloud infrastructure, and creating seamless user experiences using technologies like Java, C#, Python, Spring, React, AWS, and Azure. Currently, I'm working at Microsoft in the Dataverse team for Dynamics 365 FnO, where I focus on data import/export systems and use automation and AI to reduce operational noise and improve SLA metrics. Previously, I was at Amazon, where I played a key role in designing and launching a notifications service used by clients to manage, schedule, and monitor messages with high reliability and usability. Beyond work, I enjoy exploring topics in machine learning, data science, and system design. I’m driven by curiosity and love mentoring others, solving complex problems, and contributing to impactful products.",
+      "section_name": {
+        "about": "About me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "Animal Shelter",
+        "startDate": "2020",
+        "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
+        "images": [
+          "images/portfolio/animal-shelter/p1.jpg",
+          "images/portfolio/animal-shelter/p2.jpg"
+        ],
+        "url": "",
+        "technologies": [
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-typescript-plain",
+            "name": "TypeScript"
+          },
+          {
+            "class": "devicon-csharp-plain",
+            "name": "C#"
+          }
+        ]
+      },
+      {
+        "title": "Photography",
+        "startDate": "2018",
+        "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
+        "images": [
+          "images/portfolio/photography/p1.jpg",
+          "images/portfolio/photography/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "devicon-react-original",
+            "name": "React"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
+          }
+        ]
+      },
+      {
+        "title": "3D Object Viewer",
+        "startDate": "2015",
+        "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
+        "images": [
+          "images/portfolio/adventure/p1.jpg",
+          "images/portfolio/adventure/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-typescript-plain",
+            "name": "TypeScript"
+          },
+          {
+            "class": "devicon-csharp-plain",
+            "name": "C#"
+          }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Microsoft",
+        "title": "Software Engineer II  (L62)",
+        "years": "06.2024  - Present",
+        "mainTech": [
+          "Dataverse"
+        ],
+        "technologies": [
+          ".NET",
+          "Azure",
+          "SSMS",
+          "Batch Processing",
+          "XPP",
+          "WPF"
+        ],
+        "icon": "microsoft"
+      },
+      {
+        "company": "Amazon",
+        "title": "Software Developer Engineer II",
+        "years": "07.2023 - 06.2024",
+        "mainTech": [
+          "Fintech"
+        ],
+        "technologies": [
+          "Systems Design",
+          "Instrumentation",
+          "Spring",
+          "AWS",
+          "React"
+        ],
+        "icon": "amazon"
+      },
+      {
+        "company": "Amazon",
+        "title": "Software Developer Engineer",
+        "years": "07.2021 - 07.2023",
+        "mainTech": [
+          "Fintech"
+        ],
+        "technologies": [
+          "CDN",
+          "API Gateway",
+          "Elastic Search",
+          "SNS",
+          "SQS",
+          "SES",
+          "Lambda",
+          "EC2",
+          "Spring",
+          "React"
+        ],
+        "icon": "amazon"
+      },
+      {
+        "company": "Amazon",
+        "title": "Software Developer Intern",
+        "years": "01.2021 - 07.2021",
+        "mainTech": [
+          "Fintech"
+        ],
+        "technologies": [
+          "Spring",
+          "AWS",
+          "JSP"
+        ],
+        "icon": "amazon"
+      }
+    ]
+  }
