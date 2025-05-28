@@ -51,8 +51,8 @@
         "startDate": "2018",
         "description": "Created a face recognising app that could be added to raspberry pie and students can scan their faces and the algorithm will record the entry into a database to maintain the attendance. Used a facial recognition library and trained it with passport images and scaled down the input images to enable the hardware to scan the video input in real time preventing latency or the use of a buffered queue of frames.",
         "images": [
-          "images/portfolio/facialRecognition/p1.jpg",
-          "images/portfolio/facialRecognition/p2.jpg"
+          "images/portfolio/facialRecognition/p1.png",
+          "images/portfolio/facialRecognition/p2.png"
         ],
         "url": "",
         "technologies": [
