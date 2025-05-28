@@ -41,32 +41,32 @@
         "url": "",
         "technologies": [
           {
-            "class": "devicon-java-original",
+            "class": "devicon-java-plain",
             "name": "Java"
           }
         ]
       },
       {
-        "title": "Stochastic Gradient Descent",
-        "startDate": "2015",
-        "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
+        "title": "Facial Recognition based Attendance Manager",
+        "startDate": "2018",
+        "description": "Created a face recognising app that could be added to raspberry pie and students can scan their faces and the algorithm will record the entry into a database to maintain the attendance. Used a facial recognition library and trained it with passport images and scaled down the input images to enable the hardware to scan the video input in real time preventing latency or the use of a buffered queue of frames.",
         "images": [
-          "images/portfolio/adventure/p1.jpg",
-          "images/portfolio/adventure/p2.jpg"
+          "images/portfolio/facialRecognition/p1.jpg",
+          "images/portfolio/facialRecognition/p2.jpg"
         ],
-        "url": "https://github.com",
+        "url": "",
         "technologies": [
           {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
+            "class": "devicon-python-plain",
+            "name": "Python"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-numpy-plain",
+            "name": "Numpy"
           },
           {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-pandas-plain",
+            "name": "Pandas"
           }
         ]
       }
