@@ -12,6 +12,16 @@
           "name": "instagram",
           "url": "https://www.instagram.com/utkarshnigam1221/",
           "class": "fab fa-instagram"
+        },
+        {
+          "name": "mail",
+          "url": "mailto:utkarshnigam1221@gmail.com",
+          "class": "fa fa-envelope"
+        },
+        {
+          "name": "phone",
+          "url": "tel:9628444555",
+          "class": "fa fa-phone"
         }
       ],
       "image": "profile.jpeg"
