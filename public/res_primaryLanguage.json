@@ -11,22 +11,18 @@
     },
     "projects": [
       {
-        "title": "Animal Shelter",
-        "startDate": "2020",
-        "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
+        "title": "ProClip",
+        "startDate": "2024",
+        "description": "A clipboard manager that helps users to manage their clipboard data(text and images). It ensures that all copied information is securely stored for a period ranging from 30 to 90 days. This feature guarantees that users can access their clipboard history even after restarting their devices.ProClip offers a user-friendly interface with a chronological order of stored data, making it easy to track and retrieve past entries. Additionally, the integrated search bar allows users to quickly find specific items within their clipboard history, enhancing productivity and efficiency",
         "images": [
-          "images/portfolio/animal-shelter/p1.jpg",
-          "images/portfolio/animal-shelter/p2.jpg"
+          "images/portfolio/proclip/p1.jpg",
+          "images/portfolio/proclip/p2.jpg"
         ],
         "url": "",
         "technologies": [
           {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-dot-net-plain",
+            "name": ".Net"
           },
           {
             "class": "devicon-csharp-plain",
@@ -35,46 +31,42 @@
         ]
       },
       {
-        "title": "Photography",
+        "title": "Wavelet Trees",
+        "startDate": "2020",
+        "description": "Wavelet trees are used to separate sound frequencies by decomposing a signal into different frequency bands through a series of filters and decimation. Each node in the tree represents a specific frequency range, with low-frequency components typically on the lower branches and high-frequency components on the upper branches. This process allows for a detailed analysis of the signal's frequency content and its temporal location. We worked on parallelization of the whole process by distributing the subtree process to worker threads and applying optimal compression logic to solve the problem in optimal space and time.",
+        "images": [
+          "images/portfolio/wavelet/p3.jpg",
+          "images/portfolio/wavelet/p4.jpg"
+        ],
+        "url": "",
+        "technologies": [
+          {
+            "class": "devicon-java-plain",
+            "name": "Java"
+          }
+        ]
+      },
+      {
+        "title": "Facial Recognition based Attendance Manager",
         "startDate": "2018",
-        "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
+        "description": "Created a face recognising app that could be added to raspberry pie and students can scan their faces and the algorithm will record the entry into a database to maintain the attendance. Used a facial recognition library and trained it with passport images and scaled down the input images to enable the hardware to scan the video input in real time preventing latency or the use of a buffered queue of frames.",
         "images": [
-          "images/portfolio/photography/p1.jpg",
-          "images/portfolio/photography/p2.jpg"
+          "images/portfolio/facialRecognition/p1.png",
+          "images/portfolio/facialRecognition/p2.png"
         ],
-        "url": "https://github.com",
+        "url": "",
         "technologies": [
           {
-            "class": "devicon-react-original",
-            "name": "React"
+            "class": "devicon-python-plain",
+            "name": "Python"
           },
           {
-            "class": "devicon-javascript-plain",
-            "name": "JavaScript"
-          }
-        ]
-      },
-      {
-        "title": "3D Object Viewer",
-        "startDate": "2015",
-        "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
-        "images": [
-          "images/portfolio/adventure/p1.jpg",
-          "images/portfolio/adventure/p2.jpg"
-        ],
-        "url": "https://github.com",
-        "technologies": [
-          {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
+            "class": "devicon-numpy-plain",
+            "name": "Numpy"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-pandas-plain",
+            "name": "Pandas"
           }
         ]
       }
