@@ -20,8 +20,8 @@ npx react-scripts test --watchAll=false src/App.test.js          # single file, 
 
 Deploys are automated: `.github/workflows/deploy.yml` builds and publishes to GitHub Pages
 (https://utkarshnigam1221.github.io/portfolio/) on every push to `main`. Repo Settings → Pages →
-Source must be **GitHub Actions**. `npm run deploy` (gh-pages branch) is the old manual path and is
-no longer needed.
+Source must be **GitHub Actions**. There is no manual deploy path — the old `npm run deploy` script
+and its `gh-pages` dependency were removed so nothing can overwrite an Actions deploy by hand.
 
 CI sets `CI=true`, which makes CRA treat eslint warnings as build failures. A stray unused variable
 will break the deploy — build locally with `CI=true` before pushing.
