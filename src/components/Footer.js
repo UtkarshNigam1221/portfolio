@@ -1,38 +1,60 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Footer extends Component {
-  render() {
-    if (this.props.sharedBasicInfo) {
-      var networks = this.props.sharedBasicInfo.social.map(function (network) {
-        return (
-          <span key={network.name} className="m-4">
-            <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <i className={network.class}></i>
+const Footer = ({ sharedBasicInfo }) => {
+  const name = sharedBasicInfo?.name;
+  const email = sharedBasicInfo?.email;
+  const resume = sharedBasicInfo?.resume;
+  const social = sharedBasicInfo?.social || [];
+
+  return (
+    <footer>
+      <div className="contact">
+        <h2 className="contact-heading">Let&rsquo;s talk</h2>
+        <p className="contact-line">
+          Open to interesting engineering problems &mdash; systems worth
+          designing from scratch, and ones worth making faster.
+        </p>
+
+        <div className="contact-actions">
+          {email && (
+            <a className="contact-button primary" href={`mailto:${email}`}>
+              <i className="fas fa-envelope" />
+              {email}
             </a>
-          </span>
-        );
-      });
-    }
-
-    return (
-      <footer>
-        <div className="col-md-12">
-          <div className="social-links">{networks}</div>
-
-          <div className="copyright py-4 text-center">
-            <div className="container">
-              <small>
-                Copyright &copy;{" "}
-                {this.props.sharedBasicInfo
-                  ? this.props.sharedBasicInfo.name
-                  : "???"}
-              </small>
-            </div>
-          </div>
+          )}
+          {resume && (
+            <a
+              className="contact-button"
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fas fa-file-alt" />
+              Resume
+            </a>
+          )}
+          {social.map((network) => (
+            <a
+              className="contact-button"
+              key={network.name}
+              href={network.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className={network.class} />
+              {network.label || network.name}
+            </a>
+          ))}
         </div>
-      </footer>
-    );
-  }
-}
+      </div>
+
+      <div className="copyright py-4 text-center">
+        <div className="container">
+          <small>Copyright &copy; {name || "???"}</small>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

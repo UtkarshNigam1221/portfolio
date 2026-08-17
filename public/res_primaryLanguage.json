@@ -1,144 +1,246 @@
 {
-    "basic_info": {
-      "description_header": "Hi",
-      "description": "👋 Hi, I'm Utkarsh Nigam, a passionate and innovative software developer with over 4 years of experience in building scalable web and mobile applications. I specialize in backend development, cloud infrastructure, and creating seamless user experiences using technologies like Java, C#, Python, Spring, React, AWS, and Azure. Currently, I'm working at Microsoft in the Dataverse team for Dynamics 365 FnO, where I focus on data import/export systems and use automation and AI to reduce operational noise and improve SLA metrics. Previously, I was at Amazon, where I played a key role in designing and launching a notifications service used by clients to manage, schedule, and monitor messages with high reliability and usability. Beyond work, I enjoy exploring topics in machine learning, data science, and system design. I’m driven by curiosity and love mentoring others, solving complex problems, and contributing to impactful products.",
-      "section_name": {
-        "about": "About me",
-        "projects": "Projects",
-        "skills": "Skills",
-        "experience": "Experience"
-      }
-    },
-    "projects": [
+  "basic_info": {
+    "description_header": "Hi",
+    "description": "I’m a Software Engineer with 5+ years of experience building scalable, reliable systems across high-growth technology companies, including Amazon, Microsoft, and Property Finder.\n\nMy work sits primarily at the intersection of backend engineering, distributed systems, cloud infrastructure, and performance. I enjoy taking complex problems—whether it’s handling massive traffic, designing resilient microservices, optimizing cloud infrastructure, or improving system observability—and turning them into simple, dependable solutions.\n\nI work mainly with Java, Go, Python, AWS, Azure, and distributed databases, and I’m particularly interested in systems where scale, latency, reliability, and cost all matter. I’ve worked on high-scale payment and compliance systems, cloud-native services, and infrastructure handling millions of requests.\n\nBeyond writing code, I enjoy understanding why systems behave the way they do and designing them to work better. Recently, I’ve been exploring AI systems, LLMs, RAG, agentic architectures, and AI-powered infrastructure optimization.\n\nI’m always looking for interesting engineering problems, opportunities to build things from scratch, and ways to make software faster, simpler, and more reliable.",
+    "highlights": [
       {
-        "title": "ProClip",
-        "startDate": "2024",
-        "description": "A clipboard manager that helps users to manage their clipboard data(text and images). It ensures that all copied information is securely stored for a period ranging from 30 to 90 days. This feature guarantees that users can access their clipboard history even after restarting their devices.ProClip offers a user-friendly interface with a chronological order of stored data, making it easy to track and retrieve past entries. Additionally, the integrated search bar allows users to quickly find specific items within their clipboard history, enhancing productivity and efficiency",
-        "images": [
-          "images/portfolio/proclip/p1.jpg",
-          "images/portfolio/proclip/p2.jpg"
-        ],
-        "url": "",
-        "technologies": [
-          {
-            "class": "devicon-dot-net-plain",
-            "name": ".Net"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
-          }
-        ]
+        "label": "Shipping since",
+        "value": "2021"
       },
       {
-        "title": "Wavelet Trees",
-        "startDate": "2020",
-        "description": "Wavelet trees are used to separate sound frequencies by decomposing a signal into different frequency bands through a series of filters and decimation. Each node in the tree represents a specific frequency range, with low-frequency components typically on the lower branches and high-frequency components on the upper branches. This process allows for a detailed analysis of the signal's frequency content and its temporal location. We worked on parallelization of the whole process by distributing the subtree process to worker threads and applying optimal compression logic to solve the problem in optimal space and time.",
-        "images": [
-          "images/portfolio/wavelet/p3.jpg",
-          "images/portfolio/wavelet/p4.jpg"
-        ],
-        "url": "",
-        "technologies": [
-          {
-            "class": "devicon-java-plain",
-            "name": "Java"
-          }
-        ]
+        "label": "Companies",
+        "value": "Amazon · Microsoft · Property Finder"
       },
       {
-        "title": "Facial Recognition based Attendance Manager",
-        "startDate": "2018",
-        "description": "Created a face recognising app that could be added to raspberry pie and students can scan their faces and the algorithm will record the entry into a database to maintain the attendance. Used a facial recognition library and trained it with passport images and scaled down the input images to enable the hardware to scan the video input in real time preventing latency or the use of a buffered queue of frames.",
-        "images": [
-          "images/portfolio/facialRecognition/p1.png",
-          "images/portfolio/facialRecognition/p2.png"
-        ],
-        "url": "",
-        "technologies": [
-          {
-            "class": "devicon-python-plain",
-            "name": "Python"
-          },
-          {
-            "class": "devicon-numpy-plain",
-            "name": "Numpy"
-          },
-          {
-            "class": "devicon-pandas-plain",
-            "name": "Pandas"
-          }
-        ]
+        "label": "Focus",
+        "value": "Distributed systems · Database design · Observability"
+      },
+      {
+        "label": "Exploring",
+        "value": "LLMs · RAG · Agentic systems"
       }
     ],
-    "experience": [
-      {
-        "company": "Microsoft",
-        "title": "Software Engineer II  (L62)",
-        "years": "06.2024  - Present",
-        "mainTech": [
-          "Dataverse"
-        ],
-        "technologies": [
-          ".NET",
-          "Azure",
-          "SSMS",
-          "Batch Processing",
-          "XPP",
-          "WPF"
-        ],
-        "icon": "microsoft"
-      },
-      {
-        "company": "Amazon",
-        "title": "Software Developer Engineer II",
-        "years": "07.2023 - 06.2024",
-        "mainTech": [
-          "Fintech"
-        ],
-        "technologies": [
-          "Systems Design",
-          "Instrumentation",
-          "Spring",
-          "AWS",
-          "React"
-        ],
-        "icon": "amazon"
-      },
-      {
-        "company": "Amazon",
-        "title": "Software Developer Engineer",
-        "years": "07.2021 - 07.2023",
-        "mainTech": [
-          "Fintech"
-        ],
-        "technologies": [
-          "CDN",
-          "API Gateway",
-          "Elastic Search",
-          "SNS",
-          "SQS",
-          "SES",
-          "Lambda",
-          "EC2",
-          "Spring",
-          "React"
-        ],
-        "icon": "amazon"
-      },
-      {
-        "company": "Amazon",
-        "title": "Software Developer Intern",
-        "years": "01.2021 - 07.2021",
-        "mainTech": [
-          "Fintech"
-        ],
-        "technologies": [
-          "Spring",
-          "AWS",
-          "JSP"
-        ],
-        "icon": "amazon"
-      }
-    ]
+    "section_name": {
+      "about": "About me",
+      "projects": "Projects",
+      "skills": "Skills",
+      "experience": "Experience"
+    }
+  },
+  "projects": [
+    {
+      "title": "Homechrome",
+      "startDate": "2026",
+      "featured": true,
+      "summary": "A handloom textiles business running end to end on software I designed and built solo: Go services on AWS Lambda, semantic product search, an admin back office, and business dashboards fed by an instrumented funnel.",
+      "description": "A handloom textiles business running end to end on software I designed and built solo — customer storefront, admin back office, and the backend behind both. Shoppers search the catalog in plain language: a sentence-transformer model runs inside the API to match meaning rather than keywords, blended with full-text and fuzzy matching so that \"silk bedsheet for a wedding\" and a misspelt product name both land on the right shelf. Each query is also classified by intent — material, style, occasion, colour or price — which turns the search box into a running record of what customers actually want. The admin application is where the shop is run: catalog and pricing, inventory, coupons, orders, customers, notifications and reports, all behind role-based access. Alongside it sit the business dashboards. The whole funnel is instrumented — visitor, product view, cart, checkout, payment, repeat purchase — with coupon redemption, order value, UTM attribution, stock-outs, buyer geography and real-user page-speed reported next to it, so pricing and merchandising decisions are made from measured behaviour instead of instinct. Operationally, every request is traced end to end through OpenTelemetry into Grafana Cloud, and the reference ID shown on a customer's error screen is the trace ID, so a support message resolves straight to the request that failed. Underneath: Go on AWS Lambda, an event-driven core, DynamoDB and PostgreSQL, a Next.js storefront, and infrastructure defined as code.",
+      "images": [
+        "images/portfolio/homechrome/p1.png",
+        "images/portfolio/homechrome/p2.png"
+      ],
+      "url": "https://dev-store.homechrome.in",
+      "architecture": "homechrome-hld.html",
+      "technologies": [
+        {
+          "class": "devicon-go-original-wordmark",
+          "name": "Go"
+        },
+        {
+          "class": "devicon-nextjs-plain",
+          "name": "Next.js"
+        },
+        {
+          "class": "devicon-typescript-plain",
+          "name": "TypeScript"
+        },
+        {
+          "class": "devicon-amazonwebservices-plain",
+          "name": "AWS"
+        },
+        {
+          "class": "devicon-postgresql-plain",
+          "name": "PostgreSQL"
+        },
+        {
+          "class": "devicon-grafana-plain",
+          "name": "Grafana"
+        }
+      ]
+    },
+    {
+      "title": "ProClip",
+      "startDate": "2024",
+      "description": "A clipboard manager that helps users to manage their clipboard data(text and images). It ensures that all copied information is securely stored for a period ranging from 30 to 90 days. This feature guarantees that users can access their clipboard history even after restarting their devices.ProClip offers a user-friendly interface with a chronological order of stored data, making it easy to track and retrieve past entries. Additionally, the integrated search bar allows users to quickly find specific items within their clipboard history, enhancing productivity and efficiency",
+      "images": [
+        "images/portfolio/proclip/p1.jpg",
+        "images/portfolio/proclip/p2.jpg"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-dot-net-plain",
+          "name": ".Net"
+        },
+        {
+          "class": "devicon-csharp-plain",
+          "name": "C#"
+        }
+      ]
+    },
+    {
+      "title": "Wavelet Trees",
+      "startDate": "2020",
+      "description": "Wavelet trees are used to separate sound frequencies by decomposing a signal into different frequency bands through a series of filters and decimation. Each node in the tree represents a specific frequency range, with low-frequency components typically on the lower branches and high-frequency components on the upper branches. This process allows for a detailed analysis of the signal's frequency content and its temporal location. We worked on parallelization of the whole process by distributing the subtree process to worker threads and applying optimal compression logic to solve the problem in optimal space and time.",
+      "images": [
+        "images/portfolio/wavelet/p3.jpg",
+        "images/portfolio/wavelet/p4.jpg"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-java-plain",
+          "name": "Java"
+        }
+      ]
+    },
+    {
+      "title": "Facial Recognition based Attendance Manager",
+      "startDate": "2018",
+      "description": "Created a face recognising app that could be added to raspberry pie and students can scan their faces and the algorithm will record the entry into a database to maintain the attendance. Used a facial recognition library and trained it with passport images and scaled down the input images to enable the hardware to scan the video input in real time preventing latency or the use of a buffered queue of frames.",
+      "images": [
+        "images/portfolio/facialRecognition/p1.png",
+        "images/portfolio/facialRecognition/p2.png"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-numpy-plain",
+          "name": "Numpy"
+        },
+        {
+          "class": "devicon-pandas-plain",
+          "name": "Pandas"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Property Finder",
+      "title": "Software Engineer",
+      "years": "09.2025 - Present",
+      "mainTech": [
+        "Distributed Systems",
+        "Database Design",
+        "Observability"
+      ],
+      "technologies": [
+        "AWS",
+        "AWS CDK",
+        "Terraform",
+        "Pub/Sub",
+        "Microservices"
+      ],
+      "icon": "fas fa-building",
+      "impact": [
+        "Redesigned throttling around a 4 TPS third-party rate limit, replacing active polling with a Pub/Sub event-driven flow — removing redundant calls and cutting API failures while holding daily listing compliance.",
+        "Built a compliance orchestration service that validates property listings against government APIs, keeping them continuously aligned with real-estate regulation across multiple markets.",
+        "Built a geofencing microservice that controls client publishing rights by region, extensible to street-level accuracy through a hierarchical location-tree model.",
+        "Migrated Terraform stacks to AWS CDK and guided other teams through adoption, standardising infrastructure as code."
+      ]
+    },
+    {
+      "company": "Microsoft",
+      "title": "Software Engineer II  (L62)",
+      "years": "06.2024 - 07.2025",
+      "mainTech": [
+        "Dataverse"
+      ],
+      "technologies": [
+        ".NET",
+        "Azure",
+        "SSMS",
+        "Batch Processing",
+        "XPP",
+        "WPF"
+      ],
+      "icon": "fab fa-microsoft",
+      "impact": [
+        "Built automation and AI-driven tooling to detect and mitigate common customer issues, reducing customer-raised incidents by ~30%.",
+        "Improved SLA adherence by cutting noise from user errors through backend fixes and proactive support mechanisms.",
+        "Owned data import/export on the Dataverse team for Dynamics 365 FnO."
+      ]
+    },
+    {
+      "company": "Amazon",
+      "title": "Software Developer Engineer II",
+      "years": "07.2023 - 05.2024",
+      "mainTech": [
+        "Fintech"
+      ],
+      "technologies": [
+        "Systems Design",
+        "Instrumentation",
+        "Spring",
+        "AWS",
+        "React"
+      ],
+      "icon": "fab fa-amazon",
+      "impact": [
+        "Designed and built a notification service on Spring Boot and AWS handling over 2 million monthly events, with real-time and scheduled dispatch.",
+        "Raised delivery success rate 25% and cut message processing latency 40% through batching and asynchronous job handling.",
+        "Shipped a React console that let 30+ internal teams self-manage notification templates, cutting their dependency on dev teams by 60%.",
+        "Added an end-to-end approval workflow with versioning, giving auditability and rollback across 1000+ template versions.",
+        "Made the console WCAG 2.1 AA compliant and instrumented UX telemetry, tripling actionable UI feedback and halving issue triage time."
+      ]
+    },
+    {
+      "company": "Amazon",
+      "title": "Software Developer Engineer",
+      "years": "09.2021 - 06.2023",
+      "mainTech": [
+        "Fintech"
+      ],
+      "technologies": [
+        "CDN",
+        "API Gateway",
+        "Elastic Search",
+        "SNS",
+        "SQS",
+        "SES",
+        "Lambda",
+        "EC2",
+        "Spring",
+        "React"
+      ],
+      "icon": "fab fa-amazon",
+      "impact": [
+        "Took a new internal product from concept through to production launch.",
+        "Built services on React, Spring and AWS — API Gateway, S3, DynamoDB, CloudFront.",
+        "Mentored new hires and handled high-severity production issues under tight SLAs."
+      ]
+    },
+    {
+      "company": "Amazon",
+      "title": "Software Developer Intern",
+      "years": "01.2021 - 07.2021",
+      "mainTech": [
+        "Fintech"
+      ],
+      "technologies": [
+        "Spring",
+        "AWS",
+        "JSP"
+      ],
+      "icon": "fab fa-amazon"
+    }
+  ],
+  "education": {
+    "degree": "B.Tech, Computer Science",
+    "years": "2017 - 2021"
   }
+}

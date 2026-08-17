@@ -6,7 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import Badge from "react-bootstrap/Badge";
 
-const Experience = ({ resumeExperience, resumeBasicInfo }) => {
+const Experience = ({ resumeExperience, resumeBasicInfo, resumeEducation }) => {
   let work;
   let sectionName;
 
@@ -38,7 +38,7 @@ const Experience = ({ resumeExperience, resumeBasicInfo }) => {
             color: "#fff",
             textAlign: "center",
           }}
-          icon={<i className={"fab fa-" + ic +" experience-icon"}></i>}
+          icon={<i className={ic + " experience-icon"}></i>}
           key={i}
         >
           <div style={{ textAlign: "left", marginBottom: "4px" }}>
@@ -57,6 +57,15 @@ const Experience = ({ resumeExperience, resumeBasicInfo }) => {
           >
             {work.company}
           </h4>
+
+          {work.impact && (
+            <ul className="experience-impact">
+              {work.impact.map((line, j) => (
+                <li key={j}>{line}</li>
+              ))}
+            </ul>
+          )}
+
           <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
         </VerticalTimelineElement>
       );
@@ -77,16 +86,35 @@ const Experience = ({ resumeExperience, resumeBasicInfo }) => {
       <div className="col-md-8 mx-auto">
         <VerticalTimeline>
           {work}
+          {/* the timeline runs newest first, so it ends where it began */}
           <VerticalTimelineElement
+            date={resumeEducation?.years}
             iconStyle={{
               background: "#AE944F",
               color: "#fff",
               textAlign: "center",
             }}
-            icon={
-              <i className="fas fa-hourglass-start mx-auto experience-icon"></i>
-            }
-          />
+            icon={<i className="fas fa-university mx-auto experience-icon"></i>}
+          >
+            {resumeEducation && (
+              <>
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ textAlign: "left" }}
+                >
+                  {resumeEducation.degree}
+                </h3>
+                {resumeEducation.school && (
+                  <h4
+                    className="vertical-timeline-element-subtitle"
+                    style={{ textAlign: "left" }}
+                  >
+                    {resumeEducation.school}
+                  </h4>
+                )}
+              </>
+            )}
+          </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
     </section>

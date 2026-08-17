@@ -40,16 +40,33 @@ body[data-theme="dark"] {
    }
 
    #about {
-      background-color: #7f7f7f;
+      background-color: #6e6e6e;
       h1 span {
          color: white;
       }
-      .polaroid span {
-         background:  #6d6d6d;
+      h1:after {
+         background: #D7CAAA;
       }
-      .card {
-         background: #6d6d6d;
-         color: white;
+      .about-portrait:before {
+         border-color: rgba(215, 202, 170, 0.55);
+      }
+      .about-fact {
+         border-color: rgba(255, 255, 255, 0.18);
+         dt {
+            color: #ecdcb4;
+         }
+         dd {
+            color: #f2efe7;
+         }
+      }
+      .about-greeting {
+         color: #ecdcb4;
+      }
+      .about-lead {
+         color: #ffffff;
+      }
+      .about-para {
+         color: #ebe7de;
       }
    }
 

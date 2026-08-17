@@ -32,8 +32,15 @@ If you fix the scripts, `NODE_OPTIONS=--openssl-legacy-provider react-scripts st
 
 **Content is data, not JSX.** All copy, projects, skills, and job history live in two JSON files served statically from `public/`:
 
-- `public/res_primaryLanguage.json` — `basic_info` (about text, section titles), `projects[]`, `experience[]`
-- `public/portfolio_shared_data.json` — `basic_info` (name, rotating titles, social links, profile image), `skills.icons[]`
+- `public/res_primaryLanguage.json` — `basic_info` (bio, `highlights[]` fact rail, section titles), `projects[]`, `experience[]`, `education`
+- `public/portfolio_shared_data.json` — `basic_info` (name, rotating titles, social links, `email`, `resume`), `skills.groups[]`
+
+Field notes, all optional and all driving conditional rendering:
+- `basic_info.description` is one string with blank lines between paragraphs; `About.js` splits on `\n\n` and promotes the first paragraph to a lead.
+- `basic_info.highlights[]` — `{label, value}` rows for the About fact rail.
+- `skills.groups[]` — `{name, icons[]}`; icons carry no proficiency rating by design.
+- A project may set `featured: true` (renders the wide card at the top of the section, using its `summary`) and `architecture` (a path under `public/`, rendered as a link below the modal description).
+- An experience entry may set `impact[]` — the outcome bullets. Its `icon` holds a **full** Font Awesome class (`fab fa-amazon`, `fas fa-building`), not a bare name.
 
 `src/App.js` fetches both with `jQuery.ajax` on mount, holds them in `resumeData` / `sharedData` state, and passes slices down as props. Every component guards on props being present because the first render happens before the fetch resolves. To change site content, edit the JSON — do not hardcode into components.
 
@@ -43,12 +50,18 @@ If you fix the scripts, `NODE_OPTIONS=--openssl-legacy-provider react-scripts st
 
 `src/scss/{light,dark}-slider.scss` are imported as CSS modules and handed to `AwesomeSlider` via its `cssModule` prop in `ProjectDetailsModal.js` — they are not global stylesheets.
 
-**Component style is mixed** — `App.js`/`Header.js` are hooks-based function components; `About`, `Projects`, `Skills`, `Experience`, `Footer`, `ProjectDetailsModal` are class components. Follow whichever file you're editing rather than converting.
+**Component style is mixed** — most components are hooks-based function components; `Projects` and `ProjectDetailsModal` are still classes. Follow whichever file you're editing rather than converting.
+
+**The Homechrome architecture page** (`public/homechrome-hld.html`) is a static page with the diagram inlined as SVG. Its source of truth is `docs/homechrome-hld.excalidraw` — open that at excalidraw.com to edit, then re-export SVG and swap the `<svg>` block in the HTML. There is no build step wiring the two together.
 
 ## Gotchas
 
 - `package.json` `homepage` sets the asset base path (`/portfolio/`). It must keep matching the Pages URL or every built asset 404s.
-- `src/App.test.js` is broken as committed: it imports `render` from testing-library but calls `ReactDOM.render`, which is never imported. `npm test` fails until that's fixed.
+- `src/setupTests.js` stubs `IntersectionObserver`; jsdom has none and `react-vertical-timeline-component` observes scroll visibility on mount, so rendering `App` throws without it.
+- The experience timeline only reveals cards when scrolled into view. In a full-page screenshot they render **blank** — that is the visibility animation, not a bug. Screenshot the viewport instead.
+- Devicon variants are per-icon, not universal: `devicon-nextjs-original` and `devicon-grafana-original` do not exist (`-plain` does), and there is no Gin icon at all. `curl` the CDN's CSS and grep before trusting a class name.
 - `src/serviceWorker.js` is registered in `src/index.js` (CRA's default is `unregister`). Stale-cache behavior after deploys is expected; hard-reload when verifying changes.
 - Both JSON loaders fall back to `alert(err)` on failure — a fetch error shows a blocking browser dialog rather than logging.
-- `src/profile.jpeg` and `src/logo.svg` are unused leftovers; the live profile image is `public/images/profile.jpeg`, referenced by name from the shared JSON.
+- `src/logo.svg` is an unused leftover. Both profile images are live: `src/profile.jpeg` is imported by `About.js`, `public/images/profile.jpeg` is referenced by name from the shared JSON.
+- `public/resume.pdf` is a redacted copy — phone number removed from the text layer, not covered over. Re-copying the original from Downloads would republish it.
+- A dev-only `process is not defined` error triggers CRA's full-screen error-overlay iframe, which silently swallows clicks in browser automation. Production builds are clean.

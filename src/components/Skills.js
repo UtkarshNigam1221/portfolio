@@ -1,44 +1,38 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Skills extends Component {
-  render() {
-    if (this.props.sharedSkills && this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.skills;
-      var skills = this.props.sharedSkills.icons.map(function (skills, i) {
-        return (
-          <li className="list-inline-item mx-3" key={i}>
-            <span>
-              <div className="text-center skills-tile">
-                <i className={skills.class} style={{ fontSize: "220%" }}>
-                  <p
-                    className="text-center"
-                    style={{ fontSize: "30%", marginTop: "4px" }}
-                  >
-                    {skills.name}
-                  </p>
-                </i>
-              </div>
-            </span>
-          </li>
-        );
-      });
-    }
+const Skills = ({ sharedSkills, resumeBasicInfo }) => {
+  const sectionName = resumeBasicInfo?.section_name?.skills;
+  const groups = sharedSkills?.groups || [];
 
-    return (
-      <section id="skills">
-        <div className="col-md-12">
-          <div className="col-md-12">
-            <h1 className="section-title">
-              <span className="text-white">{sectionName}</span>
-            </h1>
+  return (
+    <section id="skills">
+      <div className="col-md-12">
+        <h1 className="section-title">
+          <span className="text-white">{sectionName}</span>
+        </h1>
+      </div>
+
+      <div className="skill-groups">
+        {groups.map((group) => (
+          <div className="skill-group" key={group.name}>
+            <h2 className="skill-group-name">{group.name}</h2>
+            <ul className="skill-group-icons">
+              {group.icons.map((skill) => (
+                <li key={skill.name}>
+                  <div className="skills-tile">
+                    {/* label sits outside the <i>: inside it inherits the
+                        devicon icon font and renders as unreadable mush */}
+                    <i className={skill.class} />
+                    <span className="skill-name">{skill.name}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="col-md-12 text-center">
-            <ul className="list-inline mx-auto skill-icon">{skills}</ul>
-          </div>
-        </div>
-      </section>
-    );
-  }
-}
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Skills;

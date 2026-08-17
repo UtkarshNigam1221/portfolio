@@ -65,6 +65,7 @@ const App = () => {
       <Experience
         resumeExperience={resumeData.experience}
         resumeBasicInfo={resumeData.basic_info}
+        resumeEducation={resumeData.education}
       />
       <Footer sharedBasicInfo={sharedData.basic_info} />
     </div>

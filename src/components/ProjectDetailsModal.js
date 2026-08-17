@@ -12,6 +12,7 @@ class ProjectDetailsModal extends Component {
       var title = this.props.data.title;
       var description = this.props.data.description;
       var url = this.props.data.url;
+      var architecture = this.props.data.architecture;
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
           return (
@@ -94,6 +95,22 @@ class ProjectDetailsModal extends Component {
               ) : null}
             </h3>
             <p className="modal-description">{description}</p>
+            {architecture ? (
+              <p className="modal-architecture">
+                <a
+                  href={architecture}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-href"
+                >
+                  <i
+                    className="fas fa-project-diagram"
+                    style={{ marginRight: "8px" }}
+                  ></i>
+                  View the architecture diagram
+                </a>
+              </p>
+            ) : null}
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>
             </div>
