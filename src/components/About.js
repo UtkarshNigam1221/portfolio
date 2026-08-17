@@ -4,7 +4,6 @@ import microsoftIcon from "@iconify/icons-logos/microsoft";
 import image from "./../profile.jpeg";
 
 const About = ({ sharedBasicInfo, resumeBasicInfo }) => {
-  const profilepic = sharedBasicInfo ? `images/${sharedBasicInfo.image}` : null;
   const sectionName = resumeBasicInfo?.section_name?.about;
   const hello = resumeBasicInfo?.description_header;
   const about = resumeBasicInfo?.description;
