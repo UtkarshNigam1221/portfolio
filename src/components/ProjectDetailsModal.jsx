@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Modal } from "react-bootstrap";
+import Icon from "./Icon";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 class ProjectDetailsModal extends Component {
@@ -17,11 +18,11 @@ class ProjectDetailsModal extends Component {
             <li className="list-inline-item mx-3" key={i}>
               <span>
                 <div className="text-center">
-                  <i className={icons.class} style={{ fontSize: "300%" }}>
+                  <Icon name={icons.class} style={{ fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "30%" }}>
                       {icons.name}
                     </p>
-                  </i>
+                  </Icon>
                 </div>
               </span>
             </li>
@@ -43,29 +44,16 @@ class ProjectDetailsModal extends Component {
         className="modal-inside"
       >
         <span onClick={this.props.onHide} className="modal-close">
-          <i className="fas fa-times fa-3x close-icon"></i>
+          <Icon name="fas fa-times" className="fa-3x close-icon" />
         </span>
         <div className="col-md-12">
           <div className="col-md-10 mx-auto" style={{ paddingBottom: "50px" }}>
             <div className="slider-tab">
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="emojione:red-circle"
-                data-inline="false"
-                style={{ marginLeft: "5px" }}
-              ></span>{" "}
+              <Icon raw name="emojione:red-circle" className="iconify slider-iconfiy" style={{ marginLeft: "5px" }} />{" "}
               &nbsp;{" "}
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="twemoji:yellow-circle"
-                data-inline="false"
-              ></span>{" "}
+              <Icon raw name="twemoji:yellow-circle" className="iconify slider-iconfiy" />{" "}
               &nbsp;{" "}
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="twemoji:green-circle"
-                data-inline="false"
-              ></span>
+              <Icon raw name="twemoji:green-circle" className="iconify slider-iconfiy" />
             </div>
             {/* slider styles live in scss/themes/*, scoped per theme */}
             <AwesomeSlider
@@ -85,10 +73,10 @@ class ProjectDetailsModal extends Component {
                   rel="noopener noreferrer"
                   className="link-href"
                 >
-                  <i
-                    className="fas fa-external-link-alt"
+                  <Icon
+                    name="fas fa-external-link-alt"
                     style={{ marginLeft: "10px" }}
-                  ></i>
+                  />
                 </a>
               ) : null}
             </h3>
@@ -101,10 +89,10 @@ class ProjectDetailsModal extends Component {
                   rel="noopener noreferrer"
                   className="link-href"
                 >
-                  <i
-                    className="fas fa-project-diagram"
+                  <Icon
+                    name="fas fa-project-diagram"
                     style={{ marginRight: "8px" }}
-                  ></i>
+                  />
                   View the architecture diagram
                 </a>
               </p>

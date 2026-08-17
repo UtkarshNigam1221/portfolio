@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./Icon";
 
 const Footer = ({ sharedBasicInfo }) => {
   const name = sharedBasicInfo?.name;
@@ -18,7 +19,7 @@ const Footer = ({ sharedBasicInfo }) => {
         <div className="contact-actions">
           {email && (
             <a className="contact-button primary" href={`mailto:${email}`}>
-              <i className="fas fa-envelope" />
+              <Icon name="fas fa-envelope" />
               {email}
             </a>
           )}
@@ -29,7 +30,7 @@ const Footer = ({ sharedBasicInfo }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fas fa-file-alt" />
+              <Icon name="fas fa-file-alt" />
               Resume
             </a>
           )}
@@ -41,7 +42,7 @@ const Footer = ({ sharedBasicInfo }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className={network.class} />
+              <Icon name={network.class} />
               {network.label || network.name}
             </a>
           ))}

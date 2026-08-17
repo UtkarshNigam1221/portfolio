@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./Icon";
 
 const Skills = ({ sharedSkills, resumeBasicInfo }) => {
   const sectionName = resumeBasicInfo?.section_name?.skills;
@@ -22,7 +23,7 @@ const Skills = ({ sharedSkills, resumeBasicInfo }) => {
                   <div className="skills-tile">
                     {/* label sits outside the <i>: inside it inherits the
                         devicon icon font and renders as unreadable mush */}
-                    <i className={skill.class} />
+                    <Icon name={skill.class} />
                     <span className="skill-name">{skill.name}</span>
                   </div>
                 </li>

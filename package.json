@@ -18,7 +18,8 @@
     "build": "node scripts/build-hld.mjs && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "build:hld": "node scripts/build-hld.mjs"
+    "build:hld": "node scripts/build-hld.mjs",
+    "icons": "node scripts/fetch-icons.mjs"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.7.0",

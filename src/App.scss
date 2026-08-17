@@ -2,6 +2,15 @@
 @import '../src/scss/themes/theme-light.scss';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
 
+/* inline SVG icons stand in for the icon fonts this site used to load; sizing
+   at 1em keeps every existing font-size rule driving them exactly as before */
+.icon {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	vertical-align: -0.125em;
+}
+
 html {
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;

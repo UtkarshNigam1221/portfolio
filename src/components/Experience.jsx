@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./Icon";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -38,7 +39,7 @@ const Experience = ({ resumeExperience, resumeBasicInfo, resumeEducation }) => {
             color: "#fff",
             textAlign: "center",
           }}
-          icon={<i className={ic + " experience-icon"}></i>}
+          icon={<Icon name={ic} className="experience-icon" />}
           key={i}
         >
           <div style={{ textAlign: "left", marginBottom: "4px" }}>
@@ -94,7 +95,7 @@ const Experience = ({ resumeExperience, resumeBasicInfo, resumeEducation }) => {
               color: "#fff",
               textAlign: "center",
             }}
-            icon={<i className="fas fa-university mx-auto experience-icon"></i>}
+            icon={<Icon name="fas fa-university" className="mx-auto experience-icon" />}
           >
             {resumeEducation && (
               <>

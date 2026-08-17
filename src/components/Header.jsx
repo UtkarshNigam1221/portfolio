@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Typical from "react-typical";
 import Switch from "react-switch";
+import Icon from "./Icon";
 
 const Header = ({ sharedData }) => {
   const [checked, setChecked] = useState(false);
@@ -28,11 +29,7 @@ const Header = ({ sharedData }) => {
       <div className="row aligner" style={{height: '100%'}}>
         <div className="col-md-12">
           <div>
-            <span 
-              className="iconify header-icon" 
-              data-icon="la:laptop-code" 
-              data-inline="false"
-            />
+            <Icon raw name="la:laptop-code" className="iconify header-icon" />
             <br/>
             <h1 className="mb-0">
               <Typical steps={[sharedData?.name || '']} wrapper="p" />
@@ -49,34 +46,24 @@ const Header = ({ sharedData }) => {
               width={90}
               height={40}
               uncheckedIcon={
-                <span
-                  className="iconify"
-                  data-icon="twemoji:owl"
-                  data-inline="false"
-                  style={{
+                <Icon raw name="twemoji:owl" className="iconify" style={{
                     display: "block",
                     height: "100%",
                     fontSize: 25,
                     textAlign: "end",
                     marginLeft: "20px",
                     color: "#353239",
-                  }}
-                />
+                  }} />
               }
               checkedIcon={
-                <span
-                  className="iconify"
-                  data-icon="noto-v1:sun-with-face"
-                  data-inline="false"
-                  style={{
+                <Icon raw name="noto-v1:sun-with-face" className="iconify" style={{
                     display: "block",
                     height: "100%",
                     fontSize: 25,
                     textAlign: "end",
                     marginLeft: "10px",
                     color: "#353239",
-                  }}
-                />
+                  }} />
               }
               id="icon-switch"
             />
