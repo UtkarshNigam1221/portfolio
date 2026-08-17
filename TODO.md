@@ -29,6 +29,10 @@ deploying cleanly from `main`.
 
 ## Done
 
+- [x] Inlined all 38 icons, retiring the devicon webfont (1.5 MB), Font Awesome
+      (~200 kB of webfonts) and the iconify script. Page transfer ~1808 kB -> ~120 kB
+      with the rendering unchanged. Regenerate with `npm run icons` after adding one.
+
 - [x] Migrated from Create React App to Vite. 2093 packages -> 367, 223 audit findings
       -> 35, build 20s -> 0.8s, and `--openssl-legacy-provider` is no longer needed.
 - [x] Dropped jQuery for `fetch`; bundle gzip ~98 kB -> ~67 kB.
