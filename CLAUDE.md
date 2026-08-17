@@ -8,15 +8,17 @@ Personal portfolio site (Utkarsh Nigam). Create React App 3.4.3 + React 16, depl
 
 ## Commands
 
-The npm scripts use Windows `cmd` syntax (`set NODE_OPTIONS=... && ...`), which silently no-ops on macOS/Linux — the env var never reaches `react-scripts`, and webpack 4 then fails on Node 17+ with `error:0308010C:digital envelope routines::unsupported`. On this machine (Node 22) run:
-
 ```bash
 npm install
-NODE_OPTIONS=--openssl-legacy-provider npx react-scripts start   # dev server, :3000
-NODE_OPTIONS=--openssl-legacy-provider npx react-scripts build   # -> build/
-npx react-scripts test                                           # jest watch mode
-npx react-scripts test --watchAll=false src/App.test.js          # single file, one shot
+npm start                                               # dev server, :3000/portfolio
+npm run build                                           # -> build/
+npx react-scripts test                                  # jest watch mode
+npx react-scripts test --watchAll=false src/App.test.js # single file, one shot
 ```
+
+`start` and `build` carry `NODE_OPTIONS=--openssl-legacy-provider` themselves — webpack 4 needs it on
+Node 17+, or the build dies with `error:0308010C:digital envelope routines::unsupported`. That is
+POSIX env syntax, so it works via npm's `sh` shim on macOS/Linux and in CI, but not in Windows `cmd`.
 
 Deploys are automated: `.github/workflows/deploy.yml` builds and publishes to GitHub Pages
 (https://utkarshnigam1221.github.io/portfolio/) on every push to `main`. Repo Settings → Pages →
@@ -25,8 +27,6 @@ and its `gh-pages` dependency were removed so nothing can overwrite an Actions d
 
 CI sets `CI=true`, which makes CRA treat eslint warnings as build failures. A stray unused variable
 will break the deploy — build locally with `CI=true` before pushing.
-
-If you fix the scripts, `NODE_OPTIONS=--openssl-legacy-provider react-scripts start` works on both platforms via npm's `sh` shim.
 
 ## Architecture
 
@@ -60,8 +60,6 @@ Field notes, all optional and all driving conditional rendering:
 - `src/setupTests.js` stubs `IntersectionObserver`; jsdom has none and `react-vertical-timeline-component` observes scroll visibility on mount, so rendering `App` throws without it.
 - The experience timeline only reveals cards when scrolled into view. In a full-page screenshot they render **blank** — that is the visibility animation, not a bug. Screenshot the viewport instead.
 - Devicon variants are per-icon, not universal: `devicon-nextjs-original` and `devicon-grafana-original` do not exist (`-plain` does), and there is no Gin icon at all. `curl` the CDN's CSS and grep before trusting a class name.
-- `src/serviceWorker.js` is registered in `src/index.js` (CRA's default is `unregister`). Stale-cache behavior after deploys is expected; hard-reload when verifying changes.
-- Both JSON loaders fall back to `alert(err)` on failure — a fetch error shows a blocking browser dialog rather than logging.
-- `src/logo.svg` is an unused leftover. Both profile images are live: `src/profile.jpeg` is imported by `About.js`, `public/images/profile.jpeg` is referenced by name from the shared JSON.
+- Both profile images are live: `src/profile.jpeg` is imported by `About.js`, `public/images/profile.jpeg` is referenced by name from the shared JSON.
 - `public/resume.pdf` is a redacted copy — phone number removed from the text layer, not covered over. Re-copying the original from Downloads would republish it.
 - A dev-only `process is not defined` error triggers CRA's full-screen error-overlay iframe, which silently swallows clicks in browser automation. Production builds are clean.

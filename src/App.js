@@ -21,7 +21,7 @@ const App = () => {
         setResumeData(data);
       },
       error: function (xhr, status, err) {
-        alert(err);
+        console.error(`Failed to load ${path}:`, err);
       },
     });
   };
@@ -36,7 +36,7 @@ const App = () => {
         document.title = data.basic_info.name;
       },
       error: function (xhr, status, err) {
-          alert(err);
+          console.error(`Failed to load ${path}:`, err);
       },
     });
   };

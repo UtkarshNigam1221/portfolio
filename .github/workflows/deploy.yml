@@ -30,11 +30,7 @@ jobs:
 
       - run: npm ci
 
-      # not `npm run build`: that script uses Windows `set VAR=` syntax, so the
-      # env var is set here instead. webpack 4 needs it on Node 17+.
-      - run: npx react-scripts build
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
+      - run: npm run build
 
       - uses: actions/configure-pages@v5
 
