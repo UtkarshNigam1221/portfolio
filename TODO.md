@@ -15,21 +15,25 @@ deploying cleanly from `main`.
 
 ## Worth doing eventually
 
-- [ ] **Drop jQuery.** It is loaded solely for the two `$.ajax` calls in `App.js`;
-      `fetch` covers both and removes a dependency from the bundle.
-- [ ] **The HLD page has no build step.** `public/homechrome-hld.html` has the diagram
-      inlined as SVG. Editing `docs/homechrome-hld.excalidraw` will not update it —
-      re-export SVG from excalidraw.com and swap the `<svg>` block by hand.
-- [ ] **Stack is old.** react-scripts 3.4.3 / React 16, which is why Node 17+ needs
-      `--openssl-legacy-provider` and why `npm install` reports a long vulnerability
-      list. None of it is exploitable on a static site with no user input, but an
-      upgrade to Vite or a current CRA replacement would retire the whole class.
+- [ ] **Replace `react-vertical-timeline-component`.** Every remaining `npm audit`
+      finding (35) comes from it declaring a 2018 `@babel/preset-es2015` beta as a
+      runtime dependency. None of it reaches the shipped bundle, but it is the only
+      thing standing between this repo and a clean audit.
+- [ ] **React is still 16.** The build tooling is current; React itself is not.
+      `react-awesome-slider` and `react-typical` are both unmaintained, so a React 18
+      upgrade needs them replaced or verified first.
+- [ ] **Vite is pinned to 5.** Vite 8 (rolldown) fails to build this app.
 - [ ] **C# and C++ render as near-identical glyphs** in the skills grid — devicon draws
       both as monochrome hexagons and the `#`/`++` detail is lost at 34px. Labels
       disambiguate; only worth fixing if it reads as a duplicate.
 
 ## Done
 
+- [x] Migrated from Create React App to Vite. 2093 packages -> 367, 223 audit findings
+      -> 35, build 20s -> 0.8s, and `--openssl-legacy-provider` is no longer needed.
+- [x] Dropped jQuery for `fetch`; bundle gzip ~98 kB -> ~67 kB.
+- [x] The HLD page is generated from the .excalidraw by `scripts/build-hld.mjs`,
+      wired into `npm run build`.
 - [x] Google Search Console verified.
 - [x] npm scripts made POSIX, so `npm start` / `npm run build` work without passing
       `NODE_OPTIONS` by hand. The deploy workflow now just calls `npm run build`.

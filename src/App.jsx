@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import $ from "jquery";
 import "./App.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -8,44 +7,27 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
+const loadJson = async (path) => {
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`${response.status} ${response.statusText}`);
+  }
+  return response.json();
+};
+
 const App = () => {
   const [resumeData, setResumeData] = useState({});
   const [sharedData, setSharedData] = useState({});
 
-  const loadResumeFromPath = (path) => {
-      $.ajax({
-      url: path,
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        setResumeData(data);
-      },
-      error: function (xhr, status, err) {
-        console.error(`Failed to load ${path}:`, err);
-      },
-    });
-  };
-
-  const loadSharedData = (path) => {
-      $.ajax({
-      url: path,
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        setSharedData(data);
-        document.title = data.basic_info.name;
-      },
-      error: function (xhr, status, err) {
-          console.error(`Failed to load ${path}:`, err);
-      },
-    });
-  };
-
   useEffect(() => {
-    loadResumeFromPath('res_primaryLanguage.json');
-      loadSharedData(`portfolio_shared_data.json`);
+    loadJson("res_primaryLanguage.json")
+      .then(setResumeData)
+      .catch((err) => console.error("Failed to load resume data:", err));
 
-  }, []); // Empty dependency array means this effect runs once on mount
+    loadJson("portfolio_shared_data.json")
+      .then(setSharedData)
+      .catch((err) => console.error("Failed to load shared data:", err));
+  }, []);
 
   return (
     <div>
